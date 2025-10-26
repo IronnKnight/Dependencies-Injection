@@ -4,12 +4,8 @@ import { Logger } from '../services/logger';
 import { HTTP } from '../services/http';
 import { Users } from '../services/users';
 
-import type { ApiConfig } from '../types';
-
-export const createIoCContainer = (config: ApiConfig) => {
+export const createIoCContainer = () => {
   const ioc = new IoCContainer();
-  
-  ioc.register('config', config);
   
   ioc.registerClass('logger', Logger);
   ioc.registerClass('http', HTTP);
