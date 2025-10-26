@@ -1,4 +1,6 @@
 export class Logger {
+  static $inject: string[] = [];
+
   info(message: string) {
     const date = new Date().toISOString();
 
